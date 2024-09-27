@@ -1,5 +1,9 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+24-09-27
+-----------------------
+Vi har gått igenom random 7070 koder.
+
 24-09-23
 ---------------------------------
 Vi gick igenom sligor-while 7060
