@@ -1,5 +1,10 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+24-10-07
+---------------------
+Vi går igenom 7073 flödesdiagram och 7070
+
+
 24-09-27
 -----------------------
 Vi har gått igenom random 7070 koder.
