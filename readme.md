@@ -1,5 +1,10 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+
+24-10-11
+---------------------
+Vi gick igenom flödescheman och diagram, uppgift 1, 2, börja med 3
+
 24-10-07
 ---------------------
 Vi går igenom 7073 flödesdiagram och 7070
