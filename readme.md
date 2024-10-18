@@ -1,5 +1,9 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+2024-10-18
+----------------------------
+Flödescheman fortsättning på rasmus dator.
+
 2024-10-14
 -------------------------------------
 Vi fortsatte med flödesheman
