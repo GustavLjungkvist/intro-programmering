@@ -1,5 +1,10 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+2024-10-21
+---------------------------
+Slingor genomgång
+
+
 2024-10-18
 ----------------------------
 Flödescheman fortsättning på rasmus dator.
