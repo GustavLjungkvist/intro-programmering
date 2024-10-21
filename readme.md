@@ -2,7 +2,7 @@ Gustav Ljungkvist Loggbok
 ------------------------------
 2024-10-21
 ---------------------------
-Slingor genomgång
+Slingor genomgång uppgifter 1 på 7095
 
 
 2024-10-18
