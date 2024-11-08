@@ -1,8 +1,18 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+2024-11-08
+----------------------
+gjorde uppgift 2 på 7100 slingor
+
+
+2024-10-25
+----------------------
+Gick igenom range
+
+
 2024-10-21
 ---------------------------
-Slingor genomgång uppgifter 1 på 7095
+Slingor genomgång uppgifter 1 på 7095 sen dog datorn och gjorde det på rasmus dator till uppgift 7096 uppgift 2
 
 
 2024-10-18
