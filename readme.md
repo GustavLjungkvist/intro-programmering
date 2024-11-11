@@ -1,5 +1,10 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+2024-11-11
+---------------------------
+Gjorde uppgift 3, 4A och börja kolla igenom 4B
+
+
 2024-11-08
 ----------------------
 gjorde uppgift 2 på 7100 slingor
