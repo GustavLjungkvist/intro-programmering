@@ -1,5 +1,10 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+2024-11-18
+------------------------
+Idag så gjorde jag uppgift 5a och 5b och kolla igenom 5c
+
+
 2024-11-11
 ---------------------------
 Gjorde uppgift 3, 4A och börja kolla igenom 4B
