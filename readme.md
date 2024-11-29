@@ -1,5 +1,9 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+2024-11-29
+Idag så gjorde jag klart uppgift 5b för den funka inte rriktigt som jag villde och sen började med 5c
+
+
 2024-11-18
 ------------------------
 Idag så gjorde jag uppgift 5a och 5b och kolla igenom 5c
