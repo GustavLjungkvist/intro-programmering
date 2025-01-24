@@ -1,6 +1,7 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
-
+2025-01-24
+började med 7115 filhantering
 
 2025-01-17
 Gjorde klart uppgift 7 blackjack var ganska tuff.
