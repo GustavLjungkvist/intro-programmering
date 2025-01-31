@@ -1,16 +1,25 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+
+2025-01-31
+Började med pygame 7200
+---------------------------------------
+
 2025-01-24
 började med 7115 filhantering
+
+---------------------------------------------
 
 2025-01-17
 Gjorde klart uppgift 7 blackjack var ganska tuff.
 
+-----------------------------------------------------
 
 
 2024-11-29
 Idag så gjorde jag klart uppgift 5b för den funka inte rriktigt som jag villde och sen började med 5c
 
+----------------------------------------------------------
 
 2024-11-18
 ------------------------
