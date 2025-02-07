@@ -1,5 +1,10 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+2025-02-07
+Jag fortsatte med mitt pygame
+----------------------------------------
+
+
 
 2025-01-31
 Började med pygame 7200
