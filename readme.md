@@ -1,8 +1,17 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+
+
+2025-02-17
+-----------------------------------
+Jag gjorde mer på mitt pygame
+
+
+
 2025-02-07
-Jag fortsatte med mitt pygame
 ----------------------------------------
+Jag fortsatte med mitt pygame
+
 
 
 
