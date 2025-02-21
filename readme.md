@@ -2,6 +2,10 @@ Gustav Ljungkvist Loggbok
 ------------------------------
 
 
+2025-02-21
+-----------------------------------------
+Jag gjorde mer på mitt pygame och lete efter inspiration
+
 2025-02-17
 -----------------------------------
 Jag gjorde mer på mitt pygame
