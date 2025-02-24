@@ -1,5 +1,9 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+2025-02-24
+------------------
+Jag gjorde klart mitt pygame
+
 
 
 2025-02-21
