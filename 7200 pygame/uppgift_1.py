@@ -36,7 +36,6 @@ while running:
     pygame.draw.rect(screen, (0, 255, 0), (pipe_x, 0, 60, pipe_height))
     pygame.draw.rect(screen, (0, 255, 0), (pipe_x, pipe_height + pipe_gap, 60, HEIGHT))
     
-    # Kollision
     if bird_y < 0 or bird_y + 30 > HEIGHT:
         running = False
     if (50 < pipe_x + 60 and 50 + 30 > pipe_x and
