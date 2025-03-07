@@ -1,8 +1,12 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+2025-03-07
+--------------------
+trodde jag hade gjort klart men blev massa krångel så starta om på början och la in bilder
+
 2025-02-24
 ------------------
-Jag gjorde klart mitt pygame
+Jag gjorde klart mitt pygame    
 
 
 
