@@ -1,5 +1,10 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+2025-03-14
+----------------------
+fixade allt men tvungen att finslipa lite mer med bilderna och scoren då scoren räknar in det senare än vad jag vill, vill även fixa att när man trycker start så ska man få ett alertnativ med att trycka SPACE för att starta istället för att starta direkt, ändra även färg och annat på scoret för man såg inte den när den var svart.
+
+
 2025-03-07
 --------------------
 trodde jag hade gjort klart men blev massa krångel så starta om på början och la in bilder

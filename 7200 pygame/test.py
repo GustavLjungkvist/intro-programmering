@@ -3,42 +3,38 @@ import random
 
 pygame.init()
 
-# Ladda bakgrundsbilder
+WHITE = (255, 255, 255)
+GREEN = (0, 255, 0)
+BLACK = (0, 0, 0)
+
 try:
     background_image = pygame.image.load("7200 pygame/stad.jpg")
     background_image = pygame.transform.scale(background_image, (400, 600))
 except pygame.error as e:
     print(f"Fel vid inläsning av bakgrundsbild: {e}")
 
-# Ladda tornen
 try:
     tower_image = pygame.image.load("7200 pygame/tower.jpg")
-    tower_image = pygame.transform.scale(tower_image, (60, 150))
+    tower_width = 80  
 except pygame.error as e:
     print(f"Fel vid inläsning av tornbild: {e}")
 
-# Ladda fågelbild
 try:
     bird_image = pygame.image.load("7200 pygame/fågel.jpg")
     bird_image = pygame.transform.scale(bird_image, (45, 45))
 except pygame.error as e:
     print(f"Fel vid inläsning av fågelbild: {e}")
 
-# Spelinställningar
 width, height = 400, 600
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Flappy Bird")
 
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-GREEN = (0, 255, 0)
-BLUE = (0, 0, 255)
 
 clock = pygame.time.Clock()
 bird_width, bird_height = 45, 45
-pipe_width = 60
+pipe_width = tower_width
 pipe_gap = 150
-pipe_velocity = 4  # Lägre hastighet för pipen
+pipe_velocity = 4  
 pipe_frequency = 1500
 
 font = pygame.font.SysFont('Arial', 30)
@@ -60,8 +56,12 @@ def draw_bird():
 
 def draw_pipes():
     for pipe in pipes:
-        pygame.draw.rect(screen, GREEN, pipe['top'])
-        pygame.draw.rect(screen, GREEN, pipe['bottom'])
+        top_scaled = pygame.transform.scale(tower_image, (pipe_width, pipe['top'].height))
+        bottom_scaled = pygame.transform.scale(tower_image, (pipe_width, pipe['bottom'].height))
+        
+        screen.blit(top_scaled, (pipe['top'].x, pipe['top'].y))
+        screen.blit(pygame.transform.flip(bottom_scaled, False, True), (pipe['bottom'].x, pipe['bottom'].y))
+
 
 def move_pipes():
     global score
@@ -72,27 +72,35 @@ def move_pipes():
             pipes.remove(pipe)
             score += 1
 
+
 def generate_pipe():
-    pipe_height = random.randint(100, height - 100)
-    top = pygame.Rect(width, 0, pipe_width, pipe_height)
-    bottom = pygame.Rect(width, pipe_height + pipe_gap, pipe_width, height - pipe_height - pipe_gap)
-    pipes.append({'top': top, 'bottom': bottom})
+    gap_height = 150  
+    min_height = 50  
+    max_height = height - 200  
+
+    pipe_height = random.randint(min_height, max_height)
+    bottom_height = height - pipe_height - gap_height  
+
+    top_rect = pygame.Rect(width, 0, tower_width, pipe_height)
+    bottom_rect = pygame.Rect(width, height - bottom_height, tower_width, bottom_height)
+
+    pipes.append({'top': top_rect, 'bottom': bottom_rect})
+
+
 
 def check_collision():
     global bird_y
     for pipe in pipes:
         if bird.colliderect(pipe['top']) or bird.colliderect(pipe['bottom']):
             return True
-    if bird_y > height - bird_height:  # Fågeln dör om den rör vid marken
-        return True
-    if bird_y < 0:  # Fågeln dör om den går för högt
+    if bird_y > height - bird_height or bird_y < 0:
         return True
     return False
 
 def show_game_over():
-    game_over_text = font.render(f"Game Over! Score: {score}", True, BLACK)
+    game_over_text = font.render(f"Spel över! Score: {score}", True, WHITE)
+    restart_text = font.render("Tryck SPACE för spela!", True, WHITE)
     screen.blit(game_over_text, (width // 4, height // 2 - 30))
-    restart_text = font.render("Press SPACE to Restart", True, BLACK)
     screen.blit(restart_text, (width // 4, height // 2 + 30))
     pygame.display.flip()
 
@@ -103,11 +111,8 @@ pipe_timer = 0
 while running:
     screen.fill(WHITE)
 
-    # Visa bakgrund
     if 'background_image' in locals():
-        screen.blit(background_image, (0, 0))  # Lägg till bakgrunden
-    else:
-        print("Bakgrundsbilden kunde inte laddas.")
+        screen.blit(background_image, (0, 0))
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -116,11 +121,11 @@ while running:
             if game_over:
                 reset_game()
             else:
-                bird_velocity = -8  # Lägre hoppstyrka för mindre "hopp"
+                bird_velocity = -8  
 
     if not game_over:
-        bird_velocity += 0.5  # Lägg till gravitation
-        bird_y = bird.y + bird_velocity
+        bird_velocity += 0.5  
+        bird_y += bird_velocity
         bird.y = bird_y
 
         pipe_timer += clock.get_time()
@@ -134,9 +139,9 @@ while running:
             game_over = True
 
         draw_bird()
-        draw_pipes()
+        draw_pipes() 
 
-        score_text = font.render(f"Score: {score}", True, BLACK)
+        score_text = font.render(f"Score: {score}", True, GREEN)
         screen.blit(score_text, (10, 10))
 
     else:

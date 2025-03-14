@@ -25,7 +25,7 @@ clock = pygame.time.Clock()
 bird_width, bird_height = 45, 45
 pipe_width = 60
 pipe_gap = 150
-pipe_velocity = 4  # Lägre hastighet för pipen
+pipe_velocity = 4 
 pipe_frequency = 1500
 
 font = pygame.font.SysFont('Arial', 30)
@@ -70,16 +70,16 @@ def check_collision():
     for pipe in pipes:
         if bird.colliderect(pipe['top']) or bird.colliderect(pipe['bottom']):
             return True
-    if bird_y > height - bird_height:  # Fågeln dör om den rör vid marken
+    if bird_y > height - bird_height:  
         return True
-    if bird_y < 0:  # Fågeln dör om den går för högt
+    if bird_y < 0:  
         return True
     return False
 
 def show_game_over():
-    game_over_text = font.render(f"Game Over! Score: {score}", True, BLACK)
+    game_over_text = font.render(f"Spel över! Score: {score}", True, BLACK)
     screen.blit(game_over_text, (width // 4, height // 2 - 30))
-    restart_text = font.render("Press SPACE to Restart", True, BLACK)
+    restart_text = font.render("Tryck SPACE för att börja om!", True, BLACK)
     screen.blit(restart_text, (width // 4, height // 2 + 30))
     pygame.display.flip()
 
@@ -97,7 +97,7 @@ while running:
             if game_over:
                 reset_game()
             else:
-                bird_velocity = -8  # Lägre hoppstyrka för mindre "hopp"
+                bird_velocity = -8  
 
     if not game_over:
         bird_velocity += 0.5
