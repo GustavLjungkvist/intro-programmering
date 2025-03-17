@@ -20,7 +20,7 @@ except pygame.error as e:
     print(f"Fel vid inläsning av tornbild: {e}")
 
 try:
-    bird_image = pygame.image.load("7200 pygame/fågel.jpg")
+    bird_image = pygame.image.load("7200 pygame/birdie.png")
     bird_image = pygame.transform.scale(bird_image, (45, 45))
 except pygame.error as e:
     print(f"Fel vid inläsning av fågelbild: {e}")
@@ -40,10 +40,10 @@ pipe_frequency = 1500
 font = pygame.font.SysFont('Arial', 30)
 
 def reset_game():
-    global bird, bird_y, bird_velocity, score, pipes, pipe_timer, game_over
+    global bird, bird_y, bird_velocity, poäng, pipes, pipe_timer, game_over
     bird_y = height // 2
     bird_velocity = 0
-    score = 0
+    poäng = 0
     pipes = []
     pipe_timer = 0
     bird = pygame.Rect(100, bird_y, bird_width, bird_height)
@@ -64,13 +64,13 @@ def draw_pipes():
 
 
 def move_pipes():
-    global score
+    global poäng
     for pipe in pipes:
         pipe['top'].x -= pipe_velocity
         pipe['bottom'].x -= pipe_velocity
         if pipe['top'].right < 0:
             pipes.remove(pipe)
-            score += 1
+            poäng += 1
 
 
 def generate_pipe():
@@ -98,7 +98,7 @@ def check_collision():
     return False
 
 def show_game_over():
-    game_over_text = font.render(f"Spel över! Score: {score}", True, WHITE)
+    game_over_text = font.render(f"Spel över! poäng: {poäng}", True, WHITE)
     restart_text = font.render("Tryck SPACE för spela!", True, WHITE)
     screen.blit(game_over_text, (width // 4, height // 2 - 30))
     screen.blit(restart_text, (width // 4, height // 2 + 30))
@@ -141,8 +141,8 @@ while running:
         draw_bird()
         draw_pipes() 
 
-        score_text = font.render(f"Score: {score}", True, GREEN)
-        screen.blit(score_text, (10, 10))
+        poäng_text = font.render(f"poäng: {poäng}", True, GREEN)
+        screen.blit(poäng_text, (10, 10))
 
     else:
         show_game_over()
