@@ -1,5 +1,9 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+2025-03-21
+-------------------------------------------
+Fixade det flesta med allt, tror jag kan säga att jag är klar och tacksam för pygamet.
+
 2025-03-17
 -------------------------
 Fixade det flesta, dock så är det problem med att få in en png bild av en fågel.
