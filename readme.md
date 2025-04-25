@@ -1,5 +1,12 @@
 Gustav Ljungkvist Loggbok
 ------------------------------
+2025-04-25
+--------------------------------
+Gjort klart mitt pygame
+
+
+
+
 2025-03-21
 -------------------------------------------
 Fixade det flesta med allt, tror jag kan säga att jag är klar och tacksam för pygamet.
